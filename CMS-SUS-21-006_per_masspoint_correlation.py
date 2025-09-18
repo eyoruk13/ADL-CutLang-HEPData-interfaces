@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 CMS Disappearing track analysis (yaml--embaked efficiency comparison)
-Per-mass-point correlation heatmap (ONLY SR1..SR49), robust parsing,
-with centered annotations and improved labels/title.
+Per-mass-point correlation heatmap (ONLY SR1..SR49).
 
 Title fixed to: "T5btbt per mass point correlation"
 X label: "m_gluino (GeV)"
