@@ -1,14 +1,9 @@
 #!/usr/bin/env python3
 """
 CMS Disappearing track analysis (yaml--embaked efficiency comparison)
-T5btbt average relative discrepancy heatmap (ONLY SR1..SR49).
-
 For each mass point (m_gluino, m_LSP):
   relative_discrepancy(SR) = (our_eff - cms_eff) / max(cms_eff, floor)
-Then aggregate across SRs (mean by default) to a single value per mass point.
-
-Output: reldiscrepancy_heatmap.png
-
+Then average across SRs to a single value per mass point.
 Author: Ekin Sıla Yörük
 """
 
