@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """
 CMS Disappearing track analysis (yaml--embaked efficiency comparison)
-Per-mass-point correlation heatmap (ONLY SR1..SR49).
-
-Title fixed to: "T5btbt per mass point correlation"
-X label: "m_gluino (GeV)"
-Y label: "m_LSP (GeV)"
-
 Author: Ekin Sıla Yörük
 """
 import os
@@ -124,7 +118,7 @@ def plot_heatmap_annot(pivot: pd.DataFrame, fmt: str = ".2f", fontsize: int = 10
                        tick_every_x: int = 3, tick_every_y: int = 2,
                        annot_skip_x: int = 1, annot_skip_y: int = 1,
                        rotate_xticks: int = 45, show_nan: bool = False, nan_text: str = "NA",
-                       save_png: str = "corr_heatmap_v10b.png", save_pdf: bool = False):
+                       save_png: str = "corr_heatmap.png", save_pdf: bool = False):
     data = pivot.values
     nrows, ncols = data.shape
     xmin, xmax = float(pivot.columns.min()), float(pivot.columns.max())
@@ -151,7 +145,6 @@ def plot_heatmap_annot(pivot: pd.DataFrame, fmt: str = ".2f", fontsize: int = 10
     ax.set_xticklabels(list(pivot.columns)[::max(1, tick_every_x)], rotation=rotate_xticks, ha="right")
     ax.set_yticklabels(list(pivot.index)[::max(1, tick_every_y)])
 
-    # Annotations
     for i in range(nrows):
         for j in range(ncols):
             if (j % max(1, annot_skip_x)) or (i % max(1, annot_skip_y)):
