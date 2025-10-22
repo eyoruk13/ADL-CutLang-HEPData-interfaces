@@ -202,7 +202,7 @@ def main():
         raise RuntimeError("No overlap between CMS YAML and .embaked on (m_gluino, m_LSP, SR).")
 
     # Correlation per mass point
-    from scipy.stats import spearmanr  # lazy import for completeness
+    from scipy.stats import spearmanr  # for completeness
     corr_df = compute_corr_per_mass(
         merged, method=args.method, zero_thr=args.zero_threshold, min_srs=args.min_srs,
         treat_both_const_equal=True, treat_both_near_zero_equal=True
